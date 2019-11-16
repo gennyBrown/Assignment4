@@ -1,4 +1,3 @@
-
 #include <string>
 #include <vector>
 #include "Movie.h"
@@ -6,7 +5,7 @@
 
 class MovieDatabase {
 private:
-	Movies vector<BST>;
+	 vector<> Movies;
 
 public:
 	MovieDatabase();
