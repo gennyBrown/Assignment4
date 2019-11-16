@@ -1,11 +1,15 @@
 #include <string>
 #include <vector>
-#include "Movie.h"
+#include "BST.h"
 
+using namespace std;
+
+//forward declaration
+class Movie;
 
 class MovieDatabase {
 private:
-	 vector<> Movies;
+	 vector<BST<Movie*>> Movies;
 
 public:
 	MovieDatabase();
@@ -16,5 +20,4 @@ public:
 	bool clear();
 	void showInventory();
 	int getHash(string);
-
 };

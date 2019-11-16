@@ -1,17 +1,20 @@
 //Movie, MovieFactory, Classic, Drama, Comedy
-#include <string>
+#include <iostream>
 #include <map>
+#include <string>
+#include "Media.h"
 
 using namespace std;
 
-class Movie {
+class Movie: public Media {
 public:
 	char MovieType;
 	string Director;
 
 	Movie();
-	~Movie();
+	virtual ~Movie();
 	virtual string toString();
+	virtual ostream& operator<<(ostream& Os, const Media& M);
 };
 
 class MovieFactory {
@@ -29,7 +32,7 @@ public:
 
 	Comedy();
 	~Comedy();
-	string toString() override;
+    ostream& operator<<(ostream& Os, const Comedy& M) override;
 };
 
 class Drama: public Movie{
@@ -38,15 +41,15 @@ public:
 
 	Drama();
 	~Drama();
-	string toString() override;
+    ostream& operator<<(ostream& Os, const Comedy& M) override;
 };
 
 class Classic : public Movie {
 public:
 	int ReleaseYear, ReleaseMonth;
-	
-	Classic();
+    string ActorFirstName, ActorLastName;
+
+    Classic();
 	~Classic();
-	string ActorFirstName, ActorLastName;
-	string toString() override;
+    ostream& operator<<(ostream& Os, const Movie& M) override;
 };

@@ -1,8 +1,9 @@
 #ifndef ASSIGNMENT4_CUSTOMERS_H
 #define ASSIGNMENT4_CUSTOMERS_H
 
-using namespace std;
+#include <vector>
 
+// forward declaration
 class Transaction;
 class Movie;
 
@@ -22,12 +23,12 @@ private:
 class CustomerDatabase
 {
 public:
-    bool add(Customer C);
+    bool add(Customer* C);
     bool remove(int ID);
     Customer* getCustomer(int ID);
     bool clear();
 private:
-    vector<Customer> Customers;
+    vector<Customer*> Customers;
     int getHash(int ID);
 };
 

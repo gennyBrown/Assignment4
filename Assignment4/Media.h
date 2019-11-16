@@ -1,8 +1,11 @@
 #include <map>
 #include <string>
-#include "Movie.h"
+#include <iostream>
 
 using namespace std;
+
+//forward declaration - MediaFactory creates Movie objects
+class Movie;
 
 class Media
 {
@@ -12,18 +15,18 @@ class Media
 		string Title;
 
 		Media();
-		~Media();
-
+		virtual ~Media();
 		void increaseQuanity();
 		void decreaseQuanity();
+        virtual ostream& operator<<(ostream& Os, const Media& M);
 };
 
 class MediaFactory
 {
+private:
 	map<char, Media*> MediaTypes;
-
-	public:
-		MediaFactory();
-		~MediaFactory();
-		Media* makeMedia(char);
+public:
+    MediaFactory();
+    ~MediaFactory();
+    Media* makeMedia(char);
 };
