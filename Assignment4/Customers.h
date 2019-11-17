@@ -1,7 +1,10 @@
 #ifndef ASSIGNMENT4_CUSTOMERS_H
 #define ASSIGNMENT4_CUSTOMERS_H
 
+#include <string>
 #include <vector>
+
+using namespace std;
 
 // forward declaration
 class Transaction;

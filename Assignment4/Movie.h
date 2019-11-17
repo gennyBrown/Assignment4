@@ -13,7 +13,6 @@ public:
 
 	Movie();
 	virtual ~Movie();
-	virtual string toString();
 	virtual ostream& operator<<(ostream& Os, const Media& M);
 };
 

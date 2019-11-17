@@ -5,6 +5,8 @@
 
 #include <string>
 
+using namespace std;
+
 class CustomerDatabase;
 class MovieDatabase;
 class TransactionDatabase;

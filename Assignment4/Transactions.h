@@ -3,7 +3,11 @@
 #ifndef ASSIGNMENT4_TRANSACTIONS_H
 #define ASSIGNMENT4_TRANSACTIONS_H
 
+#include <iostream>
 #include <queue>
+#include <string>
+
+using namespace std;
 
 //forward declaration
 class Customer;
